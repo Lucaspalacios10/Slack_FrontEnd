@@ -125,6 +125,13 @@
     .message-input-form {
         padding: 0px;
         width: 100%;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        background: #fff;
+        box-shadow: 0 -2px 8px rgba(74,21,75,0.04);
     }
     .message-input{
         padding: 0px;
@@ -133,11 +140,27 @@
     .invite-input-group {
         flex-direction: column;
         gap: 8px;
+        width: 100%;
     }
     .invite-input-group button {
         width: 100%;
-        order: 2;
         margin-top: 8px;
+        align-self: flex-end;
+    }
+    .messages-area {
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+        gap: 6px;
+        min-height: 200px;
+        max-height: 60vh;
+        margin-top: 24px;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 60px;
+    }
+    .invite-section {
+        margin-bottom: 0;
+        position: relative;
+        z-index: 2;
     }
     
     
@@ -198,6 +221,7 @@
     padding: 1.5rem 2.5rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     animation: slideDown 0.3s ease-out;
+    margin-bottom: 24px;
 }
 
 @media screen and (max-width: 450px) {
