@@ -12,7 +12,7 @@
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
-    box-shadow: 0 2px 8px rgba(74,21,75,0.08);
+    box-shadow: 0 2px 8px rgba(74, 21, 75, 0.08);
     border-bottom: 1px solid #3f0e40;
 }
 
@@ -60,7 +60,7 @@
     border-radius: 16px;
     position: relative;
     word-wrap: break-word;
-    box-shadow: 0 2px 8px rgba(74,21,75,0.06);
+    box-shadow: 0 2px 8px rgba(74, 21, 75, 0.06);
     margin-bottom: 2px;
     display: flex;
     flex-direction: column;
@@ -117,7 +117,7 @@
     border-top: 1px solid #f0e6f6;
     display: flex;
     gap: 12px;
-    box-shadow: 0 -2px 8px rgba(74,21,75,0.04);
+    box-shadow: 0 -2px 8px rgba(74, 21, 75, 0.04);
     width: 100%;
 }
 
@@ -131,22 +131,26 @@
         bottom: 0;
         z-index: 10;
         background: #fff;
-        box-shadow: 0 -2px 8px rgba(74,21,75,0.04);
+        box-shadow: 0 -2px 8px rgba(74, 21, 75, 0.04);
     }
-    .message-input{
+
+    .message-input {
         padding: 0px;
         width: 100%;
     }
+
     .invite-input-group {
         flex-direction: column;
         gap: 8px;
         width: 100%;
     }
+
     .invite-input-group button {
         width: 100%;
         margin-top: 8px;
         align-self: flex-end;
     }
+
     .messages-area {
         padding: 0.5rem 0.5rem 0.5rem 0.5rem;
         gap: 6px;
@@ -157,13 +161,14 @@
         z-index: 1;
         margin-bottom: 60px;
     }
+
     .invite-section {
         margin-bottom: 0;
         position: relative;
         z-index: 2;
     }
-    
-    
+
+
 }
 
 .message-input {
@@ -190,7 +195,7 @@
     font-size: 1rem;
     cursor: pointer;
     font-weight: 600;
-    box-shadow: 0 1px 4px rgba(97,31,105,0.08);
+    box-shadow: 0 1px 4px rgba(97, 31, 105, 0.08);
     transition: background 0.2s;
 }
 
@@ -202,7 +207,7 @@
     margin-left: auto;
     background-color: #350d36;
     color: white;
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 8px 16px;
     border-radius: 4px;
     font-weight: 600;
@@ -219,7 +224,7 @@
     background-color: #fff;
     border-bottom: 2px solid #4a154b;
     padding: 1.5rem 2.5rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     animation: slideDown 0.3s ease-out;
     margin-bottom: 24px;
 }
@@ -229,11 +234,12 @@
         padding: 0px;
         height: 100px;
     }
-    .send-button{
+
+    .send-button {
         display: flex;
         flex-direction: column;
         order: 3;
-        
+
     }
 }
 
