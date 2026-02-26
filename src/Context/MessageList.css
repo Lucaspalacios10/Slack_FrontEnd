@@ -124,7 +124,7 @@
 @media screen and (max-width: 400px) {
     .message-input-form {
         padding: 0px;
-        width: 50%;
+        width: 100%;
     }
     .message-input{
         padding: 0px;
