@@ -112,7 +112,7 @@
 }
 
 .message-input-form {
-    padding: 1.2rem 2.5rem 1.2rem 2.5rem;
+
     background-color: #fff;
     border-top: 1px solid #f0e6f6;
     display: flex;
@@ -124,7 +124,13 @@
 @media screen and (max-width: 400px) {
     .message-input-form {
         padding: 0px;
+        width: 50%;
     }
+    .message-input{
+        padding: 0px;
+        width: 100%;
+    }
+    
     
 }
 
