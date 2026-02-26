@@ -118,6 +118,14 @@
     display: flex;
     gap: 12px;
     box-shadow: 0 -2px 8px rgba(74,21,75,0.04);
+    width: 100%;
+}
+
+@media screen and (max-width: 400px) {
+    .message-input-form {
+        padding: 0px;
+    }
+    
 }
 
 .message-input {
