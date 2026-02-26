@@ -15,32 +15,57 @@ const HomeScreen = () => {
     }, [workspace_list_loading, workspace_list, navigate])
 
     if (workspace_list_loading || !workspace_list) {
-        return <span>Loading...</span>
+        return (
+            <div className="loading-container">
+                <span>Cargando tus espacios de trabajo...</span>
+            </div>
+        )
     }
 
     return (
-        <div style={{ backgroundColor: '#4a154b', padding: '16px', minHeight: '100vh'}}>
-            <h1 style={{color: 'white', marginBottom: '16px', display: 'block', textAlign: 'center'}}>Espacios de trabajo</h1>
-        
-            {
-                workspace_list_error && <span>{workspace_list_error.message}</span>
-            }
-            {
-                (workspace_list.data.workspaces && workspace_list.data.workspaces.length > 0)
-                    ? workspace_list.data.workspaces.map(
-                        (item) => {
-                            const workspaceData = item.fk_id_Workspace || item
-                            const id = workspaceData._id || item._id || workspaceData.id
-                            const title = workspaceData.title || workspaceData.name || workspaceData.workspace_title || 'Sin título'
-                            return (
-                                <div className='workspace-chats-container' key={id} onClick={() => navigate(`/workspace/${id}`)} >
-                                    {title}
-                                </div>
-                            )
-                        }
-                    )
-                    : <span>No tienes espacios de trabajo. Crea uno nuevo.</span>
-            }
+        <div className="home-screen-container">
+            <header className="home-screen-header">
+                <h1>¡Hola de nuevo!</h1>
+                <p>Elige uno de tus espacios de trabajo para continuar.</p>
+            </header>
+
+            <div className="workspace-list">
+                {
+                    workspace_list_error && <span className="error-message">{workspace_list_error.message}</span>
+                }
+                {
+                    (workspace_list.data.workspaces && workspace_list.data.workspaces.length > 0)
+                        ? workspace_list.data.workspaces.map(
+                            (item) => {
+                                const workspaceData = item.fk_id_Workspace || item
+                                const id = workspaceData._id || item._id || workspaceData.id
+                                const title = workspaceData.title || workspaceData.name || workspaceData.workspace_title || 'Sin título'
+                                const initial = title.charAt(0)
+
+                                const memberCount = workspaceData.memberCount ?? 0
+                                const memberText = memberCount === 1 ? '1 miembro' : `${memberCount} miembros`
+
+                                return (
+                                    <div className='workspace-item' key={id} onClick={() => navigate(`/workspace/${id}`)} >
+                                        <div className="workspace-icon">
+                                            {initial}
+                                        </div>
+                                        <div className="workspace-info">
+                                            <span className="workspace-title">{title}</span>
+                                            <span className="workspace-link-text">{memberText}</span>
+                                        </div>
+                                    </div>
+                                )
+                            }
+                        )
+                        : <div className="empty-state">
+                            <span>No tienes espacios de trabajo.</span>
+                            <br />
+                            <button onClick={() => navigate('/create-workspace')} className="create-btn">Crear uno nuevo</button>
+                        </div>
+                }
+            </div>
+            <button onClick={() => navigate('/create-workspace')} className="create-btn">Crear uno nuevo</button>
         </div>
     )
 }

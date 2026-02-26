@@ -29,7 +29,7 @@ const CreateWorkspaceScreen = () => {
                             id="title"
                             name="title"
                             className="form-input"
-                            placeholder="Ej. Proyecto Alpha"
+                            placeholder="Ej: Espacio de Trabajo 1"
                             value={form_state.title}
                             onChange={onChangeFieldValue}
                             disabled={isLoading}

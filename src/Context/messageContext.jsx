@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { getMessages, postMessage } from "../services/message.Service.js";
+import { getMessages, postMessage } from "../services/messageService.js";
 
 export const MessageContext = createContext({
     messages: [],
@@ -36,13 +36,13 @@ const MessageContextProvider = ({ children }) => {
             let created = res.data || res.new_message || res;
             console.log(res.message && typeof res.message === 'object')
 
-            setMessages(prev => [...prev,{
-                    ...payload, messages: payload.text,
-                    _id: Date.now(), 
-                    createdAt: new Date().toISOString(),
-                    senderName: 'You (sending...)', 
-                    isTemporary: true
-                }]);
+            setMessages(prev => [...prev, {
+                ...payload, messages: payload.text,
+                _id: Date.now(),
+                createdAt: new Date().toISOString(),
+                senderName: 'You (sending...)',
+                isTemporary: true
+            }]);
             return created;
         } catch (err) {
             console.error("Failed to post message", err);
