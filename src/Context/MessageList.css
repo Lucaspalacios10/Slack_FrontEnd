@@ -194,6 +194,7 @@
 @media screen and (max-width: 450px) {
     .invite-section {
         padding: 0px;
+        height: 100px;
     }
     .send-button{
         display: flex;
