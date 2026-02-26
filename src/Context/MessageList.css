@@ -130,6 +130,15 @@
         padding: 0px;
         width: 100%;
     }
+    .invite-input-group {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .invite-input-group button {
+        width: 100%;
+        order: 2;
+        margin-top: 8px;
+    }
     
     
 }
@@ -199,6 +208,7 @@
     .send-button{
         display: flex;
         flex-direction: column;
+        order: 3;
         
     }
 }
