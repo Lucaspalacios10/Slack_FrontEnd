@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import useCreateWorkspace from '../../hooks/useCreateWorkspace.jsx';
-import './CreateWorkspaceScreen.css';
+import './CreateWorkSpaceScreen.css';
 
 const CreateWorkspaceScreen = () => {
     const {
