@@ -1,16 +1,33 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Front-End UTN BackEnd
 
-Currently, two official plugins are available:
+Este proyecto es la interfaz front-end de la replica de la aplicacion slack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ¿Qué hace este proyecto?
 
-## React Compiler
+Permite a los usuarios:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Registrarse y autenticarse en la plataforma.
+- Crear y gestionar espacios de trabajo (workspaces).
+- Invitar miembros a los espacios de trabajo.
+- Enviar y recibir mensajes en canales de comunicación.
+- Visualizar y administrar canales y mensajes.
 
-## Expanding the ESLint configuration
+La aplicación está construida con React y utiliza Vite para el desarrollo y la compilación. Se conecta con un back-end para manejar la autenticación, la gestión de usuarios, canales, mensajes y workspaces.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Estructura principal
+
+- Screens: Vistas principales de la aplicación (Login, Registro, Home, WorkSpace).
+- Context: Contextos globales para manejar autenticación, canales, mensajes y workspaces.
+- hooks: Hooks personalizados para lógica de formularios, autenticación, creación de workspaces, etc.
+- services: Servicios para interactuar con la API del back-end.
+- utils: Utilidades y helpers.
+
+## Instalación y ejecución
+
+1. Instala dependencias:
+	npm install
+2. Ejecuta el proyecto en modo desarrollo:
+	npm run dev
+
+
